@@ -1,6 +1,5 @@
 import maya.cmds as cmds
 
-
 class ControlCreator():
     def __init__(self):
         self.window_name = "ControlCreator"
@@ -15,12 +14,13 @@ class ControlCreator():
             for sel in sels:
                 controlGroupObj = cmds.group(empty=True, name=self.renameCtrlGrp(sel))
                 groupList.append(controlGroupObj)
-                controlObj = cmds.circle(name=self.renameCtrl(sel), nr=(1, 0, 0))
+                controlObj = cmds.circle(name=self.renameCtrl(sel), nr=(1, 0, 0), radius=10)
                 controlList.append(controlObj)
                 self.changeColor(color, controlObj)
                 cmds.parent(controlObj, controlGroupObj)
                 cmds.matchTransform(controlGroupObj, sel, scale=False)
                 self.setHierarchy(sels, controlList, controlGroupObj)
+            self.constrainAuto(sels, controlList)
         else:
             controlGroupObj = cmds.group(empty=True, name='_Ctrl_Grp')
             controlObj = cmds.circle(name="_Ctrl", nr=(1, 0, 0))
@@ -68,16 +68,14 @@ class ControlCreator():
             cmds.deleteUI(self.window_name)
 
     def setHierarchy(self, hierarchyList, controlList, obj):
-        objName = obj.split("_")
-        print objName
+        objName = obj.replace("_Ctrl_Grp", "")
         parentIndex = -1
         for i in range(len(hierarchyList)):
-            hierarchyname = hierarchyList[i].split("_")
+            hierarchyname = hierarchyList[i].replace("_Jnt", "")
             if objName == hierarchyname:
                 parentIndex = i - 1
-            break
+                break
         if parentIndex > -1:
-            print "parent"
             cmds.parent(obj, controlList[parentIndex])
         else:
             print "Cannot Parent"
@@ -94,7 +92,10 @@ class ControlCreator():
             cmds.select(ctrls, r=True)
         else:
             cmds.error("select an even number of objects")
-
+          
+    def constrainAuto(self, jointList, controlList):
+        for i in range(len(controlList)):
+            cmds.parentConstraint(controlList[i], jointList[i], mo=True, weight=1)
 
 cc = ControlCreator()
 cc.create()
