@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: Takoto_Model_In_Class.ma
-//Last modified: Mon, Feb 24, 2020 03:51:58 PM
+//Last modified: Wed, Feb 26, 2020 03:44:43 PM
 //Codeset: 1252
 requires maya "2018";
 requires "stereoCamera" "10.0";
@@ -15,13 +15,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "2103A8FF-49FE-F70F-2897-289AA28287E5";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 84.478160149220358 156.62848974423144 248.10856875952541 ;
-	setAttr ".r" -type "double3" 1422.8616476494028 -5022.1999999974605 -4.1755809474970121e-16 ;
+	setAttr ".t" -type "double3" 41.075049981933411 111.28973461951603 342.98993710257321 ;
+	setAttr ".r" -type "double3" 1430.0616476493881 -5033.3999999974112 -3.0016627364305204e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "EEED6101-409D-4992-FE02-0383E981B40F";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 301.65549581175549;
+	setAttr ".coi" 373.81567774819285;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -14161,7 +14161,7 @@ createNode parentConstraint -n "R_Arm_03_RK_Jnt_parentConstraint1" -p "R_Arm_03_
 		1.5732453562122828e-08 ;
 	setAttr ".tg[1].tor" -type "double3" -0.0015030257322173441 7.4927395483193065e-05 
 		-2.3199536869878692e-05 ;
-	setAttr ".lr" -type "double3" 6.3609152511021831e-15 -6.8306676064797007e-17 4.7798472831084317e-21 ;
+	setAttr ".lr" -type "double3" 6.3624682888157531e-15 -6.8318156765147932e-17 -4.9691386217487427e-17 ;
 	setAttr ".rst" -type "double3" -14.463532858882282 2.5684650295509925e-07 3.4006136502284789e-05 ;
 	setAttr ".rsrr" -type "double3" -1.9412565194479472e-19 -2.3141581051921221e-26 
 		-1.5166992221429165e-21 ;
@@ -14208,7 +14208,7 @@ createNode parentConstraint -n "R_Arm_02_RK_Jnt_parentConstraint1" -p "R_Arm_02_
 		-1.8898652996313103e-05 ;
 	setAttr ".tg[1].tor" -type "double3" -0.0015030257322173441 7.4927395483274028e-05 
 		-2.3199536869886146e-05 ;
-	setAttr ".lr" -type "double3" 6.3609152261902713e-15 -6.8327195427016773e-17 3.3432642145672657e-21 ;
+	setAttr ".lr" -type "double3" 6.3624682053368386e-15 -6.8338671614759394e-17 -4.9692824651882452e-17 ;
 	setAttr ".rst" -type "double3" -18.014343861800619 1.7763568394002505e-15 1.4210854715202004e-14 ;
 	setAttr ".rsrr" -type "double3" -1.941256497752715e-19 -1.8199349294567662e-20 9.0995010854259409e-21 ;
 	setAttr -k on ".w0";
@@ -14255,7 +14255,7 @@ createNode parentConstraint -n "R_Arm_01_RK_Jnt_parentConstraint1" -p "R_Arm_01_
 	setAttr ".tg[1].tot" -type "double3" 0 0 -2.8421709430404007e-14 ;
 	setAttr ".tg[1].tor" -type "double3" -0.0015147814012640179 -6.0108377583748781e-05 
 		1.8597212283623082e-05 ;
-	setAttr ".lr" -type "double3" 1.2810740023140894e-14 2.9171649969048187e-14 5.9635400277440959e-15 ;
+	setAttr ".lr" -type "double3" 1.9171849386067931e-14 2.9221346135946058e-14 5.9635400277440991e-15 ;
 	setAttr ".rst" -type "double3" -7.8348500000000012 95.449600000000032 -1.1366399999999997 ;
 	setAttr ".rsrr" -type "double3" 8.5415286855711243e-17 2.9221346135946058e-14 6.1623246953355635e-15 ;
 	setAttr -k on ".w0";
@@ -14435,7 +14435,7 @@ createNode parentConstraint -n "L_Leg_01_RK_Jnt_parentConstraint1" -p "L_Leg_01_
 		8.8817841970012523e-16 ;
 	setAttr ".tg[2].tor" -type "double3" -1.2751217747286774e-14 1.9253928503939268e-14 
 		3.1805546814635168e-15 ;
-	setAttr ".lr" -type "double3" -1.2722218725854067e-14 0 0 ;
+	setAttr ".lr" -type "double3" -9.5416640443905503e-15 6.3611093629270335e-15 3.180554681463516e-15 ;
 	setAttr ".rst" -type "double3" 5.6785383224487447 64.261146545410185 -0.50721669197082098 ;
 	setAttr ".rsrr" -type "double3" -6.3611093629270335e-15 -6.3611093629270335e-15 
 		3.1805546814635168e-15 ;
@@ -16084,22 +16084,22 @@ createNode file -n "diss_00FBXASC046png";
 createNode place2dTexture -n "place2dTexture2";
 	rename -uid "AA470BE4-48AC-61C7-FE19-94AADF75E09B";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "AF0DAA1C-4900-6AB5-C096-98B2C14DBCF5";
+	rename -uid "27238BF1-4273-4769-A0F3-B99BE998AEC7";
 	setAttr -s 12 ".lnk";
 	setAttr -s 12 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "5FDAA89A-4652-EBF1-C0A0-428CD8B83D1E";
+	rename -uid "2B545C3A-4F58-9BD6-02A1-DA8AD50A3882";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "0D492170-430B-82B5-FC9C-3AA4AA16E2DF";
+	rename -uid "5C24593C-41CD-FD6F-C676-D39206905520";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "48189307-4F2D-A7A7-8EA0-54A5447DA53F";
+	rename -uid "96E03EAD-428C-F29C-8B82-63B280518CB6";
 	setAttr ".cdl" 1;
 	setAttr -s 2 ".dli[1]"  1;
 	setAttr -s 2 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "CB9A6060-4ABD-2E2E-8B10-E0B529B6F8B3";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "19813B3C-448F-F634-EC56-8B94253E33BD";
+	rename -uid "16C9797A-467F-530E-DCF9-00B06FF76C66";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "37BF4F9D-4EA4-AC72-DE45-9AA08D777F7E";
 	setAttr ".g" yes;
@@ -16170,7 +16170,7 @@ createNode materialInfo -n "materialInfo2";
 	rename -uid "B2E92CCC-4A71-9FCA-8014-2098AB93D5FF";
 createNode lambert -n "shirt_shader";
 	rename -uid "DEBC390F-4137-15B4-514E-9CB976E4E225";
-	setAttr ".c" -type "float3" 0.0063019996 0.0095133055 0.023 ;
+	setAttr ".c" -type "float3" 1 1 1 ;
 createNode shadingEngine -n "shirt_shaderSG";
 	rename -uid "4449727D-45E7-974E-A769-09850117D831";
 	setAttr ".ihi" 0;
@@ -16179,7 +16179,7 @@ createNode materialInfo -n "materialInfo3";
 	rename -uid "BD3C671A-4844-43F7-DB28-00AF8636029F";
 createNode lambert -n "pants_shader";
 	rename -uid "18D5DB18-4742-4528-6C2A-85BEC5BCCEBA";
-	setAttr ".c" -type "float3" 0.0063019996 0.0095133055 0.023 ;
+	setAttr ".c" -type "float3" 1 1 1 ;
 createNode shadingEngine -n "pants_shaderSG";
 	rename -uid "A3BD8D85-4C7E-5DD9-9AD8-E1AE7135A722";
 	setAttr ".ihi" 0;
@@ -16199,7 +16199,7 @@ createNode materialInfo -n "materialInfo5";
 	rename -uid "DCE32E4C-43F2-D3A7-1EC6-08A3E4246C30";
 createNode lambert -n "gloves_shader";
 	rename -uid "273AA589-453E-B900-4D4C-78A4ECA73A5E";
-	setAttr ".c" -type "float3" 0.086599998 0.086599998 0.086599998 ;
+	setAttr ".c" -type "float3" 0.38461539 0.38461539 0.38461539 ;
 createNode shadingEngine -n "lambert6SG";
 	rename -uid "60CC6A91-463F-3A06-8AD3-8088B54CD417";
 	setAttr ".ihi" 0;
@@ -16208,7 +16208,7 @@ createNode materialInfo -n "materialInfo6";
 	rename -uid "16C5A5B6-4809-0407-E7BF-B294CF47D738";
 createNode lambert -n "shoes_shader";
 	rename -uid "A25F5BF2-44FA-6B36-07F5-1CB105DF0E68";
-	setAttr ".c" -type "float3" 0.0063019996 0.0095133055 0.023 ;
+	setAttr ".c" -type "float3" 1 1 1 ;
 createNode shadingEngine -n "shoes_shaderSG";
 	rename -uid "D1E404CD-4CA5-C82D-357B-EB9BA18E9DBE";
 	setAttr ".ihi" 0;
@@ -16217,7 +16217,7 @@ createNode materialInfo -n "materialInfo7";
 	rename -uid "FFBB43A5-4C23-17B4-7B96-078A97BC5E13";
 createNode lambert -n "goggles_frame_shader";
 	rename -uid "CC43410B-4A39-65AC-F590-FABB69415C8B";
-	setAttr ".c" -type "float3" 0.086599998 0.086599998 0.086599998 ;
+	setAttr ".c" -type "float3" 0 0 0 ;
 createNode shadingEngine -n "lambert8SG";
 	rename -uid "91A43BDC-4234-F637-36D4-CA920B1C116D";
 	setAttr ".ihi" 0;
@@ -16226,16 +16226,19 @@ createNode materialInfo -n "materialInfo8";
 	rename -uid "DDB535FA-45B2-F2C2-9101-60819855123B";
 createNode lambert -n "goggles_lens_shader";
 	rename -uid "12767F38-4F52-6F0F-DDCB-61A601C88813";
-	setAttr ".c" -type "float3" 1 1 1 ;
+	setAttr ".rdl" 5;
+	setAttr ".rfi" 1.5603703260421753;
+	setAttr ".c" -type "float3" 0.15384616 0.15384616 0.15384616 ;
 createNode shadingEngine -n "goggles_lens_shaderSG";
 	rename -uid "442BE374-4308-8441-9423-08AFA2A5CA53";
 	setAttr ".ihi" 0;
+	setAttr -s 2 ".dsm";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo9";
 	rename -uid "6660E7E0-428B-BB17-AA6A-12A9E18724FD";
 createNode lambert -n "hair_shader";
 	rename -uid "49C79F06-45C1-6A9D-2986-AC9EF2723F3A";
-	setAttr ".c" -type "float3" 0.67741936 0.67741936 0.67741936 ;
+	setAttr ".c" -type "float3" 1 1 1 ;
 createNode shadingEngine -n "hair_shaderSG";
 	rename -uid "704B17E1-4BBE-A608-630A-3F8F72AE708D";
 	setAttr ".ihi" 0;
@@ -17253,58 +17256,58 @@ createNode nodeGraphEditorInfo -n "MayaNodeEditorSavedTabsInfo";
 	setAttr ".tgi[0].ni[34].y" 947.943603515625;
 	setAttr ".tgi[0].ni[34].nvs" 18304;
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "55B81B73-4F95-32EA-2D9E-CC9C2F56FFD2";
+	rename -uid "60EB61C4-4835-D2F3-C84B-28B64196F38E";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
-	setAttr ".tgi[0].vl" -type "double2" -3244.0913835956735 -843.08192949996226 ;
-	setAttr ".tgi[0].vh" -type "double2" -1655.9084216958297 777.15610135565839 ;
+	setAttr ".tgi[0].vl" -type "double2" -3245.2379662839239 1292.0440833858427 ;
+	setAttr ".tgi[0].vh" -type "double2" -2882.1427426167938 1607.9074080393627 ;
 	setAttr -s 16 ".tgi[0].ni";
 	setAttr ".tgi[0].ni[0].x" 358.57144165039063;
-	setAttr ".tgi[0].ni[0].y" 231.42857360839844;
+	setAttr ".tgi[0].ni[0].y" 911.4285888671875;
 	setAttr ".tgi[0].ni[0].nvs" 1923;
 	setAttr ".tgi[0].ni[1].x" 358.57144165039063;
-	setAttr ".tgi[0].ni[1].y" -788.5714111328125;
+	setAttr ".tgi[0].ni[1].y" 571.4285888671875;
 	setAttr ".tgi[0].ni[1].nvs" 1923;
 	setAttr ".tgi[0].ni[2].x" 51.428569793701172;
-	setAttr ".tgi[0].ni[2].y" 1591.4285888671875;
+	setAttr ".tgi[0].ni[2].y" 1251.4285888671875;
 	setAttr ".tgi[0].ni[2].nvs" 1923;
-	setAttr ".tgi[0].ni[3].x" 51.428569793701172;
-	setAttr ".tgi[0].ni[3].y" 1251.4285888671875;
+	setAttr ".tgi[0].ni[3].x" 358.57144165039063;
+	setAttr ".tgi[0].ni[3].y" -108.57142639160156;
 	setAttr ".tgi[0].ni[3].nvs" 1923;
 	setAttr ".tgi[0].ni[4].x" 358.57144165039063;
-	setAttr ".tgi[0].ni[4].y" 1251.4285888671875;
+	setAttr ".tgi[0].ni[4].y" -788.5714111328125;
 	setAttr ".tgi[0].ni[4].nvs" 1923;
-	setAttr ".tgi[0].ni[5].x" 51.428569793701172;
-	setAttr ".tgi[0].ni[5].y" 911.4285888671875;
+	setAttr ".tgi[0].ni[5].x" 358.57144165039063;
+	setAttr ".tgi[0].ni[5].y" 1591.4285888671875;
 	setAttr ".tgi[0].ni[5].nvs" 1923;
 	setAttr ".tgi[0].ni[6].x" 51.428569793701172;
-	setAttr ".tgi[0].ni[6].y" 571.4285888671875;
+	setAttr ".tgi[0].ni[6].y" 231.42857360839844;
 	setAttr ".tgi[0].ni[6].nvs" 1923;
 	setAttr ".tgi[0].ni[7].x" 51.428569793701172;
-	setAttr ".tgi[0].ni[7].y" 231.42857360839844;
+	setAttr ".tgi[0].ni[7].y" 571.4285888671875;
 	setAttr ".tgi[0].ni[7].nvs" 1923;
 	setAttr ".tgi[0].ni[8].x" 358.57144165039063;
-	setAttr ".tgi[0].ni[8].y" 911.4285888671875;
+	setAttr ".tgi[0].ni[8].y" -448.57144165039063;
 	setAttr ".tgi[0].ni[8].nvs" 1923;
 	setAttr ".tgi[0].ni[9].x" 51.428569793701172;
 	setAttr ".tgi[0].ni[9].y" -788.5714111328125;
 	setAttr ".tgi[0].ni[9].nvs" 1923;
-	setAttr ".tgi[0].ni[10].x" 358.57144165039063;
-	setAttr ".tgi[0].ni[10].y" 1591.4285888671875;
+	setAttr ".tgi[0].ni[10].x" 51.428569793701172;
+	setAttr ".tgi[0].ni[10].y" -448.57144165039063;
 	setAttr ".tgi[0].ni[10].nvs" 1923;
 	setAttr ".tgi[0].ni[11].x" 358.57144165039063;
-	setAttr ".tgi[0].ni[11].y" -108.57142639160156;
+	setAttr ".tgi[0].ni[11].y" 231.42857360839844;
 	setAttr ".tgi[0].ni[11].nvs" 1923;
-	setAttr ".tgi[0].ni[12].x" 358.57144165039063;
-	setAttr ".tgi[0].ni[12].y" -448.57144165039063;
+	setAttr ".tgi[0].ni[12].x" 51.428569793701172;
+	setAttr ".tgi[0].ni[12].y" -108.57142639160156;
 	setAttr ".tgi[0].ni[12].nvs" 1923;
-	setAttr ".tgi[0].ni[13].x" 358.57144165039063;
-	setAttr ".tgi[0].ni[13].y" 571.4285888671875;
+	setAttr ".tgi[0].ni[13].x" 51.428569793701172;
+	setAttr ".tgi[0].ni[13].y" 911.4285888671875;
 	setAttr ".tgi[0].ni[13].nvs" 1923;
-	setAttr ".tgi[0].ni[14].x" 51.428569793701172;
-	setAttr ".tgi[0].ni[14].y" -108.57142639160156;
+	setAttr ".tgi[0].ni[14].x" 358.57144165039063;
+	setAttr ".tgi[0].ni[14].y" 1251.4285888671875;
 	setAttr ".tgi[0].ni[14].nvs" 1923;
 	setAttr ".tgi[0].ni[15].x" 51.428569793701172;
-	setAttr ".tgi[0].ni[15].y" -448.57144165039063;
+	setAttr ".tgi[0].ni[15].y" 1591.4285888671875;
 	setAttr ".tgi[0].ni[15].nvs" 1923;
 select -ne :time1;
 	setAttr ".o" 0;
@@ -17324,7 +17327,6 @@ select -ne :defaultRenderUtilityList1;
 select -ne :defaultRenderingList1;
 select -ne :defaultTextureList1;
 	setAttr -s 4 ".tx";
-select -ne :initialShadingGroup;
 select -ne :ikSystem;
 	setAttr -s 4 ".sol";
 connectAttr "Geo_Layer.di" "Takoto_Geo.do";
@@ -20192,37 +20194,37 @@ connectAttr "L_Leg_01_RK_Jnt_scaleConstraint1.msg" "MayaNodeEditorSavedTabsInfo.
 		;
 connectAttr "R_Leg_01_RK_Jnt_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[34].dn"
 		;
-connectAttr "lambert8SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+connectAttr "skin_shaderSG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
 		;
-connectAttr "lambert6SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+connectAttr "shoes_shaderSG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
 		;
-connectAttr "goggles_lens_shader.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
+connectAttr "hair_shader.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
 		;
-connectAttr "hair_shader.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
+connectAttr "pants_shaderSG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
 		;
-connectAttr "hair_shaderSG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
+connectAttr "lambert6SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
 		;
-connectAttr "skin_shader.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
+connectAttr "goggles_lens_shaderSG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
 		;
-connectAttr "shoes_shader.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
+connectAttr "goggles_frame_shader.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
 		;
-connectAttr "goggles_frame_shader.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[7].dn"
+connectAttr "shoes_shader.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[7].dn"
 		;
-connectAttr "skin_shaderSG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[8].dn"
+connectAttr "shirt_shaderSG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[8].dn"
 		;
 connectAttr "gloves_shader.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[9].dn"
 		;
-connectAttr "goggles_lens_shaderSG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[10].dn"
+connectAttr "shirt_shader.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[10].dn"
 		;
-connectAttr "pants_shaderSG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[11].dn"
+connectAttr "lambert8SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[11].dn"
 		;
-connectAttr "shirt_shaderSG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[12].dn"
+connectAttr "pants_shader.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[12].dn"
 		;
-connectAttr "shoes_shaderSG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[13].dn"
+connectAttr "skin_shader.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[13].dn"
 		;
-connectAttr "pants_shader.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[14].dn"
+connectAttr "hair_shaderSG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[14].dn"
 		;
-connectAttr "shirt_shader.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[15].dn"
+connectAttr "goggles_lens_shader.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[15].dn"
 		;
 connectAttr "blinn1SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
