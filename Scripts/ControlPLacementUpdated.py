@@ -14,7 +14,7 @@ class ControlCreator():
             for sel in sels:
                 controlGroupObj = cmds.group(empty=True, name=self.renameCtrlGrp(sel))
                 groupList.append(controlGroupObj)
-                controlObj = cmds.circle(name=self.renameCtrl(sel), nr=(1, 0, 0), radius=10)
+                controlObj = cmds.circle(name=self.renameCtrl(sel), nr=(0, 1, 0), radius=10)
                 controlList.append(controlObj)
                 self.changeColor(color, controlObj)
                 cmds.parent(controlObj, controlGroupObj)
