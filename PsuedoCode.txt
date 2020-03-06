@@ -1,0 +1,22 @@
+Rigging Script
+
+Broken FK
+select control -> then group
+press button
+gets selection
+parent constrain only rotation
+remove last letter (generally 1)
+add _rotate
+parent constrain only translation
+remove last letter (generally 1)
+add _translate
+get child of group -> control
+add attributes Rotate and Translate to control (set initial to 1)
+connect the attributes to the parent constraint weights
+
+Later work - be able to select multiple control/groups and perform this on all of them
+connect it into the creating of controls
+
+Other ideas - create a script that fixes joint orients on IK systems
+
+
