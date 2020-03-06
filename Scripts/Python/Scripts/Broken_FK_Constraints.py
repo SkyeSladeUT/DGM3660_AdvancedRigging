@@ -3,12 +3,25 @@ import maya.cmds as cmds
 class BrokenFK():
 
     def __init__(self):
-        pass
+        self.window_name = "BrokenFKConstaints"
+
+    def create(self):
+        self.delete()
+        self.window_name = cmds.window(self.window_name, t="Broken FK Constaints")
+        self.column = cmds.columnLayout(p=self.window_name)
+        self.constrainButton = cmds.button(p=self.column, label="Broken FK Constraints",
+                                      command=lambda *args: self.Broken_FK_Constraints())
+        cmds.showWindow(self.window_name)
+
+    def delete(self):
+        if (cmds.window(self.window_name, exists=True)):
+            cmds.deleteUI(self.window_name)
+
     #Select parent->child->parent->child...
     def Broken_FK_Constraints(self, sels=[]):
         if len(sels) < 1:
             sels = cmds.ls(sl = True)
-        if len(sels) < 1 or len(sels)%2!=0:
+        if len(sels) > 1 or len(sels)%2==0:
             for i in range(0,len(sels), 2):
                 self.Broken_FK_Constraints_Single(sels[i], sels[i+1])
 
@@ -40,4 +53,4 @@ class BrokenFK():
 
 
 rig = BrokenFK()
-rig.Broken_FK_Constraints()
+rig.create()

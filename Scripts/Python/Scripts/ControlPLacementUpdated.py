@@ -19,7 +19,7 @@ class ControlCreator():
                 self.changeColor(color, controlObj)
                 cmds.parent(controlObj, controlGroupObj)
                 cmds.matchTransform(controlGroupObj, sel, scale=False)
-                self.setHierarchy(sels, controlList, controlGroupObj)
+                #self.setHierarchy(sels, controlList, controlGroupObj)
             self.constrainAuto(sels, controlList)
         else:
             controlGroupObj = cmds.group(empty=True, name='_Ctrl_Grp')
